@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f8i-rx-tUL">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,68 +15,73 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desert_dune_sand_168112_240x320" translatesAutoresizingMaskIntoConstraints="NO" id="Nz5-OE-EG2">
-                                <rect key="frame" x="0.0" y="-49" width="320" height="651"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desert_dune_sand_168112_240x320" translatesAutoresizingMaskIntoConstraints="NO" id="Nz5-OE-EG2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp Converter from °C to °F, °K" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-46-jCB">
-                                <rect key="frame" x="34" y="91" width="253" height="80"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-wR-dgx">
-                                <rect key="frame" x="32" y="251" width="257" height="31"/>
-                                <color key="minimumTrackTintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <color key="thumbTintColor" systemColor="systemPinkColor"/>
-                            </slider>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WLQ-i8-e8H">
-                                <rect key="frame" x="16" y="481" width="288" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-1w-R3A">
+                                <rect key="frame" x="34" y="140" width="347" height="294"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQK-lK-7XR">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp Converter from °C to °F, °K" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-46-jCB">
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="WIb-LI-NrL"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="k4F-vI-59A"/>
+                                            <constraint firstAttribute="height" constant="80" id="Zhr-FK-D6a"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Farenheit">
-                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1r-J0-ki3">
-                                        <rect key="frame" x="154" y="0.0" width="134" height="31"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 33°C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvo-Fb-cSe">
+                                        <rect key="frame" x="0.0" y="88" width="347" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="V2d-jp-aUd"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="tTj-We-ScA"/>
+                                            <constraint firstAttribute="height" constant="80" id="754-dn-wV4"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Kelvin">
-                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                    </button>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-wR-dgx">
+                                        <rect key="frame" x="-2" y="176" width="351" height="31"/>
+                                        <color key="minimumTrackTintColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <color key="thumbTintColor" systemColor="systemPinkColor"/>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 306.15 °K" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krE-zr-vYe">
+                                        <rect key="frame" x="0.0" y="214" width="347" height="80"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="krE-zr-vYe" secondAttribute="width" id="24s-zN-CBG"/>
+                                    <constraint firstItem="pZ1-46-jCB" firstAttribute="width" secondItem="Gvo-Fb-cSe" secondAttribute="width" id="WHT-3q-MYT"/>
+                                    <constraint firstItem="Gvo-Fb-cSe" firstAttribute="height" secondItem="krE-zr-vYe" secondAttribute="height" id="eVW-aW-NXB"/>
+                                </constraints>
                             </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1ZF-8v-gN2">
+                                <rect key="frame" x="34" y="781" width="347" height="32"/>
+                                <segments>
+                                    <segment title="Farenheit"/>
+                                    <segment title="Kelvin"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hVa-wR-dgx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="1sd-dc-j2E"/>
-                            <constraint firstItem="WLQ-i8-e8H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5IA-TU-Ves"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WLQ-i8-e8H" secondAttribute="trailing" constant="16" id="785-UE-bLV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVa-wR-dgx" secondAttribute="trailing" constant="33" id="7q7-2R-nJi"/>
+                            <constraint firstItem="ohl-1w-R3A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bcs-Jj-UoV"/>
                             <constraint firstItem="Nz5-OE-EG2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FKN-C1-rV9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pZ1-46-jCB" secondAttribute="trailing" constant="33" id="Hek-jn-dTs"/>
+                            <constraint firstItem="ohl-1w-R3A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="GS1-H4-aTl"/>
                             <constraint firstItem="Nz5-OE-EG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-140" id="Psb-ou-r1P"/>
-                            <constraint firstItem="pZ1-46-jCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="VZi-1L-glv"/>
-                            <constraint firstItem="hVa-wR-dgx" firstAttribute="top" secondItem="pZ1-46-jCB" secondAttribute="bottom" constant="80" id="VrF-5R-pXx"/>
-                            <constraint firstItem="WLQ-i8-e8H" firstAttribute="top" secondItem="hVa-wR-dgx" secondAttribute="bottom" constant="200" id="rYD-Xh-TCb"/>
-                            <constraint firstItem="pZ1-46-jCB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u4q-ef-kxS"/>
+                            <constraint firstItem="1ZF-8v-gN2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ohl-1w-R3A" secondAttribute="bottom" constant="9" id="QGV-b1-7Z0"/>
+                            <constraint firstItem="1ZF-8v-gN2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="Xet-kx-2Le"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ZF-8v-gN2" secondAttribute="trailing" constant="33" id="a4R-S8-2xl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1ZF-8v-gN2" secondAttribute="bottom" constant="50" id="sRn-bh-3wC"/>
                             <constraint firstItem="Nz5-OE-EG2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uum-0U-4WG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ohl-1w-R3A" secondAttribute="trailing" constant="33" id="yhJ-WR-XvN"/>
                             <constraint firstItem="Nz5-OE-EG2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="zeH-mG-vn9"/>
                         </constraints>
                     </view>
@@ -91,7 +97,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f8i-rx-tUL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="40i-iT-2KU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="placeholderTextColor"/>
                     </navigationBar>
@@ -121,9 +127,6 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
