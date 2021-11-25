@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ITempConverter-->
+        <!--TempConverter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                             <constraint firstItem="Nz5-OE-EG2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="zeH-mG-vn9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ITempConverter" id="N55-xk-qaA"/>
+                    <navigationItem key="navigationItem" title="TempConverter" id="N55-xk-qaA"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="Gvo-Fb-cSe" id="8Sf-Nh-Z1d"/>
                         <outlet property="convertedTempLabel" destination="krE-zr-vYe" id="CaL-73-PSd"/>
